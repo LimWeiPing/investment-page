@@ -1,0 +1,89 @@
+h1{
+    color: black;
+    background-color: gold;
+    border: 5px solid yellow;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  h2{
+    color: gray;
+  }
+  
+  p, h1, h2{
+    font-family: 'caveat';
+  }
+  
+  img {
+    box-shadow: 10px 10px 15px grey;
+  }
+  
+  .favourite{
+    font-family: cursive;
+    font-size: 40px;
+    text-shadow: 4px 4px 2px rgba(150,150,150,1)
+  }
+  
+  #type{
+    color: gold;
+    font-size:40px;
+    text-shadow:4px 4px 2px rgba(150,150,150,1);
+  }
+
+  div{
+    float: left;
+  }
+
+  #myGraph{
+    padding: 25px;
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+  }
+
+  html, body {
+    height: 100%
+  }
+  
+  .map {
+    height: 300px;
+  }
+
+  #map {
+    background-color: blue;
+  }
+  
+  .btn {
+    background-color: rgba(10, 10, 230, .5);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .3);
+    text-decoration: none;
+    margin: 0.5rem 0 1rem;
+    display: inline-block;
+  }
+
+  section{
+    border: 4px solid gray;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px grey;
+    float: left;
+    height: 360px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  #plotSettings{
+    width: 140px;
+  }
+
+  #plot{
+    width:550px;
+  }
+
+  button:hover{
+    color: blue;
+    border:2px solid;
+  }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>My Investment</title>
+    <meta charset ="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel=”stylesheet”>
+    <link rel="stylesheet" href="investment.css">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <script src="investment.js"></script>
+    <script> function changeTitle(){
+        var title=document.querySelector("#mainTitle");
+        title.innerHTML += "<br> must read!";}
+        </script>
+    <script> function changeTitleCSSStyle(){
+        title = document.querySelector("#mainTitle");
+        title.style.color = 'silver';
+        title.style.backgroundColor = 'gray';
+        title.sytle.border = "5px dashed white";}
+        </script>   
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+</head>
+
+<body onload="plot()">
+    
+    <h1 id="mainTitle">My Investment</h1>
+    <button onclick="changeTitle();">click to see</button>
+    <br><button onclick="changeTitleCSSStyle();">click to change title color</button>
+    <p> Investment make you rich. By putting your money in the right place and let the money work for you. 
+        If you want to achieved financial freedom one of the way is by investment.</p>
+
+        <h2>How to start your investment?</h2>
+        <p>At the begining, no need to put large amount of investment. You can putting small percentage of your income like 20% each month.
+        Choose a right investment and slowly build out your portfolio. 
+        This will bring you greate return in the future.</p>
+
+        <h2 id="type">Investment Field</h2>
+        <ul>
+            <li>Cryptocurrency</li>
+            <li>Stock market</li>
+            <li>Option</li>
+            <li>Property</li>
+            <li>Fund/Bond</li>
+        </ul>
+
+        <h2>Where to buy Bitcoin?</h2>
+        <button class="btn" onclick="getLocation(event)">Click to show your location with OpenStreetMap</button>
+        <div id="map" class="map"></div>
+        
+        <br><img width=300 src="https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/655346/bitcoin-cryptocurrency-digital-ethereum-dollar-gold-investment-getty.jpg&w=2000&op=resize" alt="picture of bitcoin">
+
+        <p class="favourite">Bitcoin is the <b>world largest and rank number one</b> in cryptocurrency!</p>
+        <p class="favourite">One of the cheif characteristc of Bitcoin is its limited supply. There are only <mark>20 millions</mark> bitcoin can be mined in total.
+    </p>
+
+        <a href="https://www.fool.com/quote/crypto/btc/" target="_blank">Bitcoin webpage and check the price</a>
+
+  
+
+
+    <h2>my bitcoin portfolio</h2>
+    <section id="plotsettings">
+    <label for="xMin"> xMin: </label>
+    value: <input type=number id="xMin" value=0 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="xMax"> xMax: </label>
+    value: <input type=number id="xMax" value=6.28 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="yMin">yMin: </label>
+    value: <input type=number id="yMin" value=-1 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="yMax">yMax: </label>
+    value: <input type=number id="yMax" value=1 step=0.5 oninput="plot();">
+    <p></p>
+    <label for="color">Color: </label>
+    value: <input type=color id="color" onchange="plot();">
+    <p></p>
+    <label for="function">Function to plot: </label>
+    <input id="function" type="text" value="sin(x)" onchange="plot();">
+    <p></p>
+    <button onclick="plot();">Plot it!</button>
+    </section>
+
+<section id="plot">
+    <div id="myGraph">This is my division!</div>
+</section>  
+
+<p> day</p>
+
+</body>
+
+
+</html>
